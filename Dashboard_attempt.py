@@ -110,8 +110,6 @@ fig.add_trace(
     )
 )
 
-fig.show()
-
 
 
 
@@ -186,93 +184,6 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-####Deleted code####
-
-start_date = datetime(2003, 1, 1)
-end_date = datetime(2021, 12, 31)
-num_months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month) + 1
-
-start_date = datetime(2003, 1, 1)
-end_date = datetime(2021, 12, 31)
-num_months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month) + 1
-
-
-
-
-
-
-
-
-# Incorporate data
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')
-
-# Initialize the app
-app = Dash(__name__)
-
-# App layout
-app.layout = html.Div([
-    html.Div(children='My First App with Data'),
-    dash_table.DataTable(data=df.to_dict('records'), page_size=10)
-])
-
-if __name__ == '__main__':
-    app.run_server(host='localhost',port=8005)
-
-
-
-
-from dash import Dash, html
-
-app = Dash(__name__)
-
-app.layout = html.Div([
-    html.Div(children='Hello World')
-])
-if __name__ == '__main__':
-    app.run_server(host='localhost',port=8005)
-
-
-
-# Run the app
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-
-cmap = ListedColormap([
-    '#08306b', '#08519c', '#2171b5', '#4292c6',
-    '#6baed6', '#9ecae1', '#c6dbef', '#deebf7',
-    '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a',
-    '#ef3b2c', '#cb181d', '#a50f15', '#67000d',
-])
-
-fig = plt.figure(figsize=(10, 1))
-
-ax = fig.add_axes([0, 0, 1, 1])
-ax.set_axis_off()
-
-col = PatchCollection([
-    Rectangle((y, 0), 1, 1)
-    for y in range(FIRST, LAST + 1)
-])
-
-# set data, colormap and color limits
-
-col.set_array(ch4)
-col.set_cmap(cmap)
-col.set_clim(reference - LIM, reference + LIM)
-ax.add_collection(col)
-
-ax.set_ylim(0, 1)
-ax.set_xlim(FIRST, LAST + 1)
-
-#fig.savefig('C:/Users/bengo/OneDrive/Documents/GitHub/Climate_Coders/results/warming-stripes_plotly.png')
-
-fig = py.plot_mpl(fig, filename="my first plotly plot")
 
 
 
