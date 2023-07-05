@@ -69,9 +69,8 @@ fig.update_layout(
         zeroline=False,
         showticklabels=True,
         tickmode='array',
-        showticklabels=False
+        showticklabels=False,
         tickvals=[]
-       # ticktext=[(datetime(2003, 1, 1) + timedelta(days=30 * (x - 1))).strftime('%B %Y') for x in range(FIRST, LAST + 1)]
     ),
     yaxis=dict(
         range=[0, 1],
@@ -79,7 +78,6 @@ fig.update_layout(
         zeroline=False,
         showticklabels=False,
         tickvals=[]
-
     )
 )
 
@@ -114,10 +112,9 @@ fig.add_trace(
 
 
 
+
 ####Dashboard####
 app = Dash(__name__)
-
-server = app.server
 
 tabs_styles = {
     'height': '44px'
@@ -172,9 +169,6 @@ def render_content(tab):
 
 if __name__ == '__main__':
     app.run_server(host='localhost',port=8005)
-
-
-
 
 
 
