@@ -3,3 +3,4 @@ pandas
 gunicorn
 numpy
 datetime
+chart_studio
