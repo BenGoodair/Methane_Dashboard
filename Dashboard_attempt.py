@@ -116,6 +116,9 @@ fig.add_trace(
 ####Dashboard####
 app = Dash(__name__)
 
+server = app.server
+
+
 tabs_styles = {
     'height': '44px'
 }
