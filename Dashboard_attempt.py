@@ -67,7 +67,6 @@ fig.update_layout(
         range=[FIRST, LAST + 1],
         showgrid=False,
         zeroline=False,
-        showticklabels=True,
         tickmode='array',
         showticklabels=False,
         tickvals=[]
