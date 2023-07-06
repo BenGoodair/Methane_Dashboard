@@ -8,4 +8,4 @@ geopandas
 geopy
 dash_bootstrap_components
 matplotlib
-os
+
