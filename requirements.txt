@@ -4,3 +4,5 @@ gunicorn
 numpy
 datetime
 chart_studio
+geopandas
+geopy
