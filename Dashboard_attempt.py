@@ -353,7 +353,7 @@ for item in additional:
     item[-2], item[-1] = item[-1], item[-2]
 df_additional = pd.DataFrame(additional, columns=['County', 'Latitude', 'Longitude'])
 final_coordinates = pd.concat([df_coordinates, df_additional], ignore_index = True)
-df = pd.merge(health_df, df_coordinates, on='County')
+df = pd.merge(health_df, final_coordinates, on='County')
 
 # filter datafame by ignoring deaths <= 9 or NaN
 # also drop rows where County is nan
