@@ -472,7 +472,7 @@ fig4.update_layout(
 app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
 
 
-#server = app.server
+server = app.server
 
 
 tabs_styles = {
