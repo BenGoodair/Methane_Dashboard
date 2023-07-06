@@ -178,7 +178,7 @@ def get_coordinates(county):
 county_names = health_df["County"].unique()
 county_names = county_names.tolist()
 
-#coordinates = []
+coordinates = []
 #for county in county_names:
 #    try:
 #        lat, lon = get_coordinates(county)
