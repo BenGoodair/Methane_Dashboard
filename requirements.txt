@@ -6,3 +6,4 @@ datetime
 chart_studio
 geopandas
 geopy
+dash_bootstrap_components
